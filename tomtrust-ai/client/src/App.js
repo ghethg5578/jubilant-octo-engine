@@ -12,7 +12,7 @@ function App() {
     setReply("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/chat", { message });
+      const res = await axios.post("/api/chat", { message });
       setReply(res.data.reply);
     } catch (err) {
       console.error(err);
